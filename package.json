@@ -1,6 +1,9 @@
 {
-  "private": true,
   "devDependencies": {
     "benchmark": "^2.1.4"
+  },
+  "private": true,
+  "scripts": {
+    "fixpack": "npx fixpack"
   }
 }
