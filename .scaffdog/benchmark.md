@@ -12,7 +12,7 @@ questions:
 ```md
 # {{ inputs.value }}
 
-https://sasaplus1.github.io/javascript-benchmarks/{{ inputs.value }}
+https://sasaplus1.github.io/javascript-benchmarks/benchmarks/{{ inputs.value }}
 ```
 
 # `{{ inputs.value }}/index.html`
