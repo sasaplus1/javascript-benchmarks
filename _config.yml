@@ -1,4 +1,6 @@
 exclude:
   - LICENSE
   - README.md
+  - node_modules
   - package.json
+  - yarn.lock
