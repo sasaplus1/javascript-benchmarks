@@ -55,9 +55,7 @@ suite.on('complete', function() {
 
   if (isBrowser) {
     console.log(this);
-  }
 
-  if (typeof document !== 'undefined') {
     for (var i = 0, len = this.length; i < len; ++i) {
       results.push(String(this[i]));
     }
