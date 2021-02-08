@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "benchmark": "^2.1.4"
+    "benchmark": "^2.1.4",
+    "lodash": "^4.17.20"
   },
   "private": true,
   "scripts": {
