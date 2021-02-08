@@ -7,6 +7,14 @@ questions:
   value: 'Please enter benchmark name.'
 ---
 
+# `{{ inputs.value }}/README.md`
+
+```md
+# {{ inputs.value }}
+
+https://sasaplus1.github.io/javascript-benchmarks/{{ inputs.value }}
+```
+
 # `{{ inputs.value }}/index.html`
 
 ```html
