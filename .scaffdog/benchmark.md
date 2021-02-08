@@ -34,6 +34,8 @@ var isBrowser = typeof Benchmark !== 'undefined';
 
 var suite = (isBrowser) ? new Benchmark.Suite() : new require('benchmark').Suite();
 
+var _ = (isBrowser) ? _ : require('lodash');
+
 suite.add('test1', function() {
 });
 
