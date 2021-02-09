@@ -35,13 +35,13 @@ suite.add('for-in 3 - for-in & hasOwnProperty', function() {
   }
 });
 
-suite.add('for-in 3 - for-in & cached hasOwnProperty', function() {
+suite.add('for-in 4 - for-in & cached hasOwnProperty', function() {
   for (var key in o) {
     hasOwnProperty.call(o, key);
   }
 });
 
-suite.add('for-in 4 - for-in', function() {
+suite.add('for-in 5 - for-in', function() {
   for (var key in o) {}
 });
 
