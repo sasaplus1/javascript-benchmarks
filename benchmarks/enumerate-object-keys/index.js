@@ -1,3 +1,5 @@
+'use strict';
+
 var isBrowser = typeof Benchmark !== 'undefined';
 
 var suite = (isBrowser) ? new Benchmark.Suite() : new require('benchmark').Suite();
@@ -11,7 +13,7 @@ var forIn1;
 var forIn2;
 var objectKeys;
 
-suite.add('for-in 1', function() {
+suite.add('for-in 1 - for-in & hasOwnProperty & Array#push', function() {
   for (var key in o) {
     if (Object.prototype.hasOwnProperty.call(o, key)) {
       forIn1.push(key);
@@ -19,12 +21,28 @@ suite.add('for-in 1', function() {
   }
 });
 
-suite.add('for-in 2', function() {
+suite.add('for-in 2 - for-in & cached hasOwnProperty & Array#push', function() {
   for (var key in o) {
     if (hasOwnProperty.call(o, key)) {
       forIn2.push(key);
     }
   }
+});
+
+suite.add('for-in 3 - for-in & hasOwnProperty', function() {
+  for (var key in o) {
+    Object.prototype.hasOwnProperty.call(o, key);
+  }
+});
+
+suite.add('for-in 3 - for-in & cached hasOwnProperty', function() {
+  for (var key in o) {
+    hasOwnProperty.call(o, key);
+  }
+});
+
+suite.add('for-in 4 - for-in', function() {
+  for (var key in o) {}
 });
 
 suite.add('Object#keys', function() {
