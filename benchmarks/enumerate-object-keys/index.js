@@ -45,7 +45,7 @@ suite.add('for-in 4 - for-in', function() {
   for (var key in o) {}
 });
 
-suite.add('Object#keys', function() {
+suite.add('Object.keys', function() {
   objectKeys = Object.keys(o);
 });
 
