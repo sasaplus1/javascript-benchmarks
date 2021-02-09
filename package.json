@@ -11,6 +11,8 @@
     "copy-libs": "run-s copy-libs:*",
     "copy-libs:benchmark": "cp ./node_modules/benchmark/benchmark.js ./benchmarks/benchmark.js",
     "copy-libs:lodash": "cp ./node_modules/lodash/lodash.js ./benchmarks/lodash.js",
-    "fixpack": "npx fixpack"
+    "fixpack": "npx fixpack",
+    "serve": "npx serve .",
+    "server": "run-s serve"
   }
 }
