@@ -30,7 +30,7 @@ https://sasaplus1.github.io/javascript-benchmarks/benchmarks/{{ inputs.value }}
     <script src="./index.js"></script>
   </head>
   <body>
-    <pre id="js-console"></pre>
+    <pre id="js-console">processing...</pre>
   </body>
 </html>
 ```
