@@ -7,11 +7,16 @@ var _ = (isBrowser) ? _ : require('lodash');
 var o;
 var a;
 var s;
+var m;
 
 var compare;
 
 suite.add('WeakSet#has', function() {
   s.has(o);
+});
+
+suite.add('WeakMap#has', function() {
+  m.has(o);
 });
 
 suite.add('Array#includes', function() {
@@ -54,6 +59,12 @@ suite.on('start', function() {
 
   for (var i = 0, len = a.length; i < len; ++i) {
     s.add(a[i]);
+  }
+
+  m = new WeakMap();
+
+  for (var i = 0, len = a.length; i < len; ++i) {
+    m.set(a[i], a[i]);
   }
 });
 
