@@ -13,6 +13,7 @@ var forIn1;
 var forIn2;
 var objectKeys;
 var objectPropertyNames;
+var objectPropertyNamesAndSymbols;
 var ownKeys;
 
 suite.add('for-in 1 - for-in & hasOwnProperty & Array#push', function() {
@@ -53,6 +54,11 @@ suite.add('Object.keys', function() {
 
 suite.add('Object.getOwnPropertyNames', function() {
   objectPropertyNames = Object.getOwnPropertyNames(o);
+});
+
+suite.add('Object.getOwnPropertyNames & Object.getOwnPropertySymbols', function() {
+  objectPropertyNamesAndSymbols =
+    Object.getOwnPropertyNames(o).concat(Object.getOwnPropertySymbols(o));
 });
 
 suite.add('Reflect.ownKeys', function() {
