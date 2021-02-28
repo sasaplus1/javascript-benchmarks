@@ -12,6 +12,8 @@ var o;
 var forIn1;
 var forIn2;
 var objectKeys;
+var objectPropertyNames;
+var ownKeys;
 
 suite.add('for-in 1 - for-in & hasOwnProperty & Array#push', function() {
   for (var key in o) {
@@ -47,6 +49,14 @@ suite.add('for-in 5 - for-in', function() {
 
 suite.add('Object.keys', function() {
   objectKeys = Object.keys(o);
+});
+
+suite.add('Object.getOwnPropertyNames', function() {
+  objectPropertyNames = Object.getOwnPropertyNames(o);
+});
+
+suite.add('Reflect.ownKeys', function() {
+  ownKeys = Reflect.ownKeys(o);
 });
 
 suite.on('start', function() {
