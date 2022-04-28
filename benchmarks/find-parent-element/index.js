@@ -16,6 +16,22 @@ function init(parent) {
   return span;
 }
 
+suite.add('while parentNode', function() {
+  var div = document.createElement('div');
+
+  var child = init(div);
+
+  document.body.appendChild(div);
+
+  var el = child;
+
+  while (el !== div) {
+    el = el.parentNode;
+  }
+
+  document.body.removeChild(div);
+});
+
 suite.add('while parentElement', function() {
   var div = document.createElement('div');
 
