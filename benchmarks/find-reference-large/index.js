@@ -8,15 +8,25 @@ var o;
 var a;
 var s;
 var m;
+var ws;
+var wm;
 
 var compare;
 
-suite.add('WeakSet#has', function() {
+suite.add('Set#has', function() {
   s.has(o);
 });
 
-suite.add('WeakMap#has', function() {
+suite.add('Map#has', function() {
   m.has(o);
+});
+
+suite.add('WeakSet#has', function() {
+  ws.has(o);
+});
+
+suite.add('WeakMap#has', function() {
+  wm.has(o);
 });
 
 suite.add('Array#includes', function() {
@@ -55,16 +65,28 @@ suite.on('start', function() {
     }
   }
 
-  s = new WeakSet();
+  s = new Set();
 
   for (var i = 0, len = a.length; i < len; ++i) {
     s.add(a[i]);
   }
 
-  m = new WeakMap();
+  m = new Map();
 
   for (var i = 0, len = a.length; i < len; ++i) {
     m.set(a[i], a[i]);
+  }
+
+  ws = new WeakSet();
+
+  for (var i = 0, len = a.length; i < len; ++i) {
+    ws.add(a[i]);
+  }
+
+  wm = new WeakMap();
+
+  for (var i = 0, len = a.length; i < len; ++i) {
+    wm.set(a[i], a[i]);
   }
 });
 
